@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SecondTp/src" modelPluginID="SecondTp" modelName="WebApplication"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    copyrightFields="false" operationReflection="false" importOrganizing="true">
+  <foreignModel>MyModele.ecore</foreignModel>
+  <genPackages prefix="MyModele" disposableProviderFactory="true" ecorePackage="MyModele.ecore#/">
+    <genDataTypes ecoreDataType="MyModele.ecore#//calendar"/>
+    <genClasses ecoreClass="MyModele.ecore#//webpage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//webpage/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//webpage/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//webpage/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//webpage/keywords"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyModele.ecore#//webpage/category"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModele.ecore#//web">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//web/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//web/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//web/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//web/keywords"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyModele.ecore#//web/webpage"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModele.ecore#//article">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//article/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//article/created"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModele.ecore#//category">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModele.ecore#//category/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyModele.ecore#//category/article"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
